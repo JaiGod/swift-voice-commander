@@ -1,0 +1,5 @@
+# Python version: local setup, downloaded speech model and personal recordings
+python/.venv/
+python/models/
+python/data/
+__pycache__/

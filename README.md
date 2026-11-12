@@ -26,6 +26,18 @@ The app uses Apple-only frameworks, so it needs an Apple device or a Mac. It wil
 3. Replace everything in `ContentView.swift` with the contents of `voice.swift`.
 4. Run the app and allow microphone and speech recognition access.
 
+### Python on Windows
+
+The [`python`](python) folder has a desktop version with the same voice commands, recording, baseline and mood estimate. It needs [Python 3](https://www.python.org/downloads/) and a microphone.
+
+1. Download this repository.
+2. Double-click `python/Start Voice Log.bat`. The first run installs the required packages and downloads a 40 MB speech model.
+3. Pick your microphone from the list, then click **Start Listening**.
+
+Speech recognition uses [Vosk](https://alphacephei.com/vosk/) and runs offline on your computer. Recordings and logs are saved in `python/data`.
+
+The Python version uses a simple word list instead of Apple's sentiment score, so results can differ slightly from the iPad app. To check the mood logic, run `python -m unittest test_mood_core` from the `python` folder.
+
 ## Voice commands
 
 Tap **Start Listening**, then say:
